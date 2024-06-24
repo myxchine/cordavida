@@ -6,9 +6,9 @@ export default function Hero() {
       <Image
         //src="/placeholder.svg"
         src="/cordovia-2.jpeg"
-        width={400}
-        height={400}
-        priority
+        width={100}
+        height={100}
+        priority={true}
         alt="Hero"
         className="mx-auto h-[300px] md:h-[400px] w-full overflow-hidden rounded-xl object-cover   blur"
       />
