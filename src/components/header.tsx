@@ -25,7 +25,7 @@ const Header = () => {
       <div className="flex flex-col px-0    sm:px-12 md:px-12 md:p-4 max-w-[1600px] mx-auto">
         <div className="flex items-center justify-between relative w-full">
           <div className="p-4 flex justify-between items-center gap-2">
-            <Link href="/">
+            <Link href="/" aria-label="logo">
               <Logo className="  h-[30px] w-auto flex items-left justify-left" />
             </Link>
 
