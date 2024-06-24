@@ -1,13 +1,16 @@
 "use server";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Hero() {
   return (
     <section className="flex flex-col items-center justify-center p-4 space-y-8 pb-[48px] md:py-32  md:flex-row md:space-x-16 md:space-y-0 max-w-[1200px] mx-auto">
       <Image
         //src="/placeholder.svg"
-        src="/cordovia-2.jpeg"
+        //src="/cordovia-2.jpeg"
+        //src="/cordavida-3.webp"
+        src="/cordavida-4.jpeg"
         width={100}
         height={100}
         priority={true}
@@ -30,12 +33,16 @@ export default async function Hero() {
         </section>
 
         <section className="flex flex-row gap-2 ">
-          <button className="bg-black border border-black text-sm font-medium rounded-md  text-white p-2 text-center px-4 w-full tracking-tighter max-w-[200px]">
-            Our Services
-          </button>
-          <button className="bg-white border border-gray-300 text-sm font-medium rounded-md text-black p-2 text-center px-4 w-full tracking-tighter max-w-[200px]">
-            Contact Us
-          </button>
+          <Link href="/services" className="flex w-full">
+            <button className="bg-black border border-black text-sm font-medium rounded-md  text-white p-2 text-center px-4 w-full tracking-tighter max-w-[200px]">
+              Our Services
+            </button>
+          </Link>
+          <Link href="/contact" className="flex w-full">
+            <button className="bg-white border border-gray-300 text-sm font-medium rounded-md text-black p-2 text-center px-4 w-full tracking-tighter max-w-[200px]">
+              Contact Us
+            </button>
+          </Link>
         </section>
       </div>
     </section>
