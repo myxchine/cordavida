@@ -13,7 +13,7 @@ export default function Showcase() {
             of services to meet all your business needs.
           </p>
           <section className="flex f w-full justify-center items-center max-w-[300px] mx-auto">
-            <Link href="/en/portfolio" className="flex w-full max-w-[500px]">
+            <Link href="/en/services" className="flex w-full max-w-[500px]">
               <button className="bg-black text-white border border-black text-sm font-medium rounded-md text-black p-2 text-center px-4 w-full ">
                 Our Services
               </button>

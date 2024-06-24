@@ -14,7 +14,6 @@ export default function OrderForm() {
     file: null,
     deliveryAddress: "",
     budget: "",
-    deadline: "",
   });
 
   const handleChange = (
@@ -127,13 +126,7 @@ export default function OrderForm() {
         placeholder="Budget"
         className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
       />
-      <input
-        type="date"
-        name="deadline"
-        value={formData.deadline}
-        onChange={handleChange}
-        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
-      />
+
       <button
         type="submit"
         disabled={loading}
