@@ -15,7 +15,7 @@ export default async function Hero() {
         height={100}
         priority={true}
         alt="Hero"
-        className="mx-auto h-[260px] md:h-[400px] w-full overflow-hidden rounded-xl object-cover   blur"
+        className="mx-auto h-[300px] md:h-[400px] w-full overflow-hidden rounded-xl object-cover   blur"
       />
       <div className="flex flex-col gap-8">
         <section className="flex flex-col gap-4 ">
@@ -27,8 +27,8 @@ export default async function Hero() {
             .
           </h1>
           <p className="text text-black/60 max-w-[600px] md:text-xl">
-            Cordavida is a design and large format printing company dedicated to
-            crafting exceptional visual experiences for our clients.
+            We are a design and large format printing company dedicated our
+            clients.
           </p>
         </section>
 
@@ -48,3 +48,12 @@ export default async function Hero() {
     </section>
   );
 }
+
+/*
+
+ <p className="text text-black/60 max-w-[600px] md:text-xl">
+            Cordavida is a design and large format printing company dedicated to
+            crafting exceptional visual experiences for our clients.
+          </p>
+
+          */
