@@ -1,20 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [event.target.name]: event.target.value,
+    }));
+  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
-
-    const formData = {
-      name: event.target,
-      email: event.target,
-      message: event.target,
-    };
 
     console.log("Form Data:", formData);
 
@@ -23,6 +31,11 @@ export default function Contact() {
 
     setIsSubmitting(false);
     setIsSuccess(true);
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
@@ -46,6 +59,8 @@ export default function Contact() {
                 placeholder="Name"
                 className="max-w-lg flex-1 p-2 rounded-md border border-gray-300 bg-white "
                 required
+                value={formData.name}
+                onChange={handleInputChange}
               />
               <input
                 type="email"
@@ -53,12 +68,16 @@ export default function Contact() {
                 placeholder="Email"
                 className="max-w-lg flex-1 p-2 rounded-md border border-gray-300 bg-white"
                 required
+                value={formData.email}
+                onChange={handleInputChange}
               />
               <textarea
                 name="message"
                 placeholder="Message"
                 className="max-w-lg flex-1 p-2 rounded-md border border-gray-300 bg-white"
                 required
+                value={formData.message}
+                onChange={handleInputChange}
               />
               <button
                 type="submit"
@@ -89,7 +108,6 @@ export default function Contact() {
                         d="M4 12a8 8 0 018-8V0C6.477 0 0 6.477 0 14h4zm2 5.291A7.963 7.963 0 014 12H0c0 4.411 3.589 8 8 8v-4.709z"
                       ></path>
                     </svg>
-                    <span>Submitting...</span>
                   </div>
                 ) : (
                   "Submit"
