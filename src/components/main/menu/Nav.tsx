@@ -5,13 +5,13 @@ const Nav = () => {
     <nav className="">
       <ul className=" space-x-6 flex justify-between items-center  ">
         <li className="">
-          <Link href="/">Home</Link>
+          <Link href="/en/">Home</Link>
         </li>
         <li className="">
-          <Link href="/services">Services</Link>
+          <Link href="/en/services">Services</Link>
         </li>
         <li className="">
-          <Link href="/contact">Contact</Link>
+          <Link href="/en/contact">Contact</Link>
         </li>
       </ul>
     </nav>

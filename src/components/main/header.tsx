@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 import { CloseIcon, MenuIcon2, Logo } from "@/components/icons";
-import MobileMenu from "@/components/menu/Mobile";
-import Nav from "@/components/menu/Nav";
+import MobileMenu from "@/components/main/menu/Mobile";
+import Nav from "@/components/main/menu/Nav";
 import Link from "next/link";
 
 const Header = () => {

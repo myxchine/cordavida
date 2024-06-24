@@ -10,13 +10,13 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ handleClose }) => {
       <nav className="p-4 ">
         <ul className="space-y-6">
           <li onClick={handleClose}>
-            <Link href="/">Home</Link>
+            <Link href="/en/">Home</Link>
           </li>
           <li onClick={handleClose}>
-            <Link href="/services">Services</Link>
+            <Link href="/en/services">Services</Link>
           </li>
           <li onClick={handleClose}>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/en/contact">Contact Us</Link>
           </li>
         </ul>
       </nav>
