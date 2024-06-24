@@ -1,11 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Showcase() {
   return (
-    <section className="flex flex-col items-center justify-center p-4  pt-[48px] pb-[48px] md:py-32   max-w-[1200px] mx-auto ">
+    <section className="flex flex-col items-center justify-center md:flex-row p-4 space-y-12  pt-[48px] pb-[48px] md:py-32 md:px-12 md:gap-16 max-w-[1200px] mx-auto ">
+      <Image
+        src="/images/cordavida-1.png"
+        width={100}
+        height={100}
+        priority={true}
+        alt="Hero"
+        className="mx-auto aspect-square w-full overflow-hidden rounded-xl object-cover  blur-sm md:order-last"
+      />
       <div className="pb-[48px] space-y-8 ">
         <section className="flex flex-col gap-3 text-center">
-          <h1 className="text-4xl sm:text-6xl xl:text-7xl font-bold tracking-tighter">
+          <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
             Showcasing <span className="text-[#DA0785]  ">Our</span> Work
           </h1>
           <p className="text text-black/60 max-w-[600px] md:text-xl">

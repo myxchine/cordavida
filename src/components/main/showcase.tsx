@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Showcase() {
   return (
     <section className="flex flex-col items-center justify-start p-4  pt-[48px] pb-[48px] md:py-32   max-w-[1200px] mx-auto bg-black/5">
@@ -9,11 +7,11 @@ export default function Showcase() {
         </p>
       </div>
       <div className="pb-[48px] space-y-12 ">
-        <section className="flex flex-col gap-3 text-center">
+        <section className="flex flex-col gap-3 text-center max-w-[600px] ">
           <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
             Comprehensive Printing Solutions
           </h1>
-          <p className="text text-black/60 max-w-[600px] md:text-xl">
+          <p className="text hidden text-black/60 max-w-[600px] md:text-xl">
             From large format printing to custom design, we offer a wide range
             of services to meet all your business needs.
           </p>
@@ -36,16 +34,6 @@ export default function Showcase() {
               and marketing materials to elevate your brand.
             </p>
           </div>
-        </section>
-        <section>
-          <Image
-            src="/images/cordavida-1.png"
-            width={100}
-            height={100}
-            priority={true}
-            alt="Hero"
-            className="mx-auto h-[290px] md:h-[600px] w-full overflow-hidden rounded-md object-cover   blur-sm"
-          />
         </section>
       </div>
     </section>

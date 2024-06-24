@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default async function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center p-4 space-y-12 pb-[48px] md:py-32  md:flex-row md:space-x-16 md:space-y-0 max-w-[1200px] mx-auto">
+    <section className="flex flex-col items-center justify-center p-4 space-y-12 pb-[48px] md:py-32  md:flex-row md:space-x-16 md:px-12 md:space-y-0 max-w-[1200px] mx-auto">
       <Image
         src="/images/cordavida-4.jpeg"
         width={100}
@@ -17,7 +17,7 @@ export default async function Hero() {
       <div className="flex flex-col gap-8">
         <section className="flex flex-col gap-3 ">
           <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
-            Elevate Your Brand with{" "}
+            Elevate Your Image with{" "}
             <span className="text-[#DA0785] text-4xl sm:text-5xl xl:text-6xl ">
               Cordavida
             </span>

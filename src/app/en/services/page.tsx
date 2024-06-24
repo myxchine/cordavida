@@ -1,17 +1,17 @@
 export default function Services() {
   return (
-    <div className="container pt-4 px-4 md:px-6 pb-[48px] md:pb-32 flex flex-col items-center justify-center w-full">
-      <div className="flex flex-col items-center justify-center space-y-8 text-center w-full">
-        <div className="space-y-2 text-left">
+    <div className="container pt-4 px-4 md:px-6 pb-[48px] lg:py-32 md:pb-32 flex flex-col items-center justify-center w-full mx-auto">
+      <div className="flex flex-col items-center justify-start space-y-8 max-w-xl  w-full">
+        <div className="space-y-2 text-center w-full">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
             Our Services
           </h2>
-          <p className="max-w-[500px] text-black/60 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className=" text-black/60 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Cordavida is a design and large format printing company dedicated to
             crafting exceptional visual experiences for our clients.
           </p>
         </div>
-        <div className="mx-auto w-full max-w-sm space-y-2">
+        <div className="mx-auto w-full max-w-xl space-y-2">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2 border border-black/10 shadow rounded-lg p-4">
               <h3 className="text-xl font-bold tracking-tighter">Design</h3>
