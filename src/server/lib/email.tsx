@@ -13,8 +13,8 @@ interface EmailData {
   htmlContent: string;
 }
 
-const API_KEY: string = process.env.EMAIL_KEY;
-            
+const API_KEY: string = process.env.EMAIL_KEY ?? "";
+
 export default async function sendBookingConfirmationEmail(
   customerName: string,
   customerEmail: string,
