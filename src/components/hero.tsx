@@ -1,6 +1,8 @@
+"use server";
+
 import Image from "next/image";
 
-export default function Hero() {
+export default async function Hero() {
   return (
     <section className="flex flex-col items-center justify-center p-4 space-y-8 pb-[48px] md:py-32  md:flex-row md:space-x-16 md:space-y-0 max-w-[1200px] mx-auto">
       <Image
