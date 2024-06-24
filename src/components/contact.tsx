@@ -11,9 +11,9 @@ export default function Contact() {
     setIsSubmitting(true);
 
     const formData = {
-      name: event.target.elements.name.value,
-      email: event.target.elements.email.value,
-      message: event.target.elements.message.value,
+      name: event.target,
+      email: event.target,
+      message: event.target,
     };
 
     console.log("Form Data:", formData);
