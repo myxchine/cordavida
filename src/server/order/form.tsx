@@ -8,46 +8,66 @@ export default function OrderForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    phone: "",
+    company: "",
+    projectDetails: "",
+    file: null,
+    deliveryAddress: "",
+    budget: "",
+    deadline: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value, files } = e.target;
+    if (name === "file") {
+      setFormData({
+        ...formData,
+        [name]: files ? files[0] : null,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const { name, email, message } = formData;
-
     setLoading(true);
 
     try {
-      const res = await newOrder({
-        name,
-        email,
-        message,
+      const formDataToSubmit = new FormData();
+      Object.keys(formData).forEach((key) => {
+        formDataToSubmit.append(key, formData[key]);
       });
 
-      console.log("Reservation created successfully.");
+      const res = await newOrder(formDataToSubmit);
+      console.log("Order created successfully.");
+      setLoading(false);
     } catch (error) {
-      console.error("Error creating reservation:", error);
-      setLoading(false); // Ensure loading state is updated on error
+      console.error("Error creating order:", error);
+      setLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="reservation-form space-y-4 w-full">
+    <form
+      onSubmit={handleSubmit}
+      className="reservation-form space-y-4 w-full flex flex-col items-center justify-center"
+    >
       <input
         type="text"
         name="name"
         value={formData.name}
         onChange={handleChange}
         placeholder="Name"
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+        required
       />
       <input
         type="email"
@@ -55,9 +75,70 @@ export default function OrderForm() {
         value={formData.email}
         onChange={handleChange}
         placeholder="Email"
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+        required
       />
-      <input type="hidden" name="message" value={formData.message} />
-      <button type="submit" disabled={loading}>
+      <input
+        type="text"
+        name="phone"
+        value={formData.phone}
+        onChange={handleChange}
+        placeholder="Phone Number"
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+        required
+      />
+      <input
+        type="text"
+        name="company"
+        value={formData.company}
+        onChange={handleChange}
+        placeholder="Company Name (if applicable)"
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+      />
+      <textarea
+        name="projectDetails"
+        value={formData.projectDetails}
+        onChange={handleChange}
+        placeholder="Project Details"
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+        required
+      />
+      <input
+        type="file"
+        name="file"
+        onChange={handleChange}
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+      />
+      <input
+        type="text"
+        name="deliveryAddress"
+        value={formData.deliveryAddress}
+        onChange={handleChange}
+        placeholder="Delivery Address"
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+        required
+      />
+
+      <input
+        type="text"
+        name="budget"
+        value={formData.budget}
+        onChange={handleChange}
+        placeholder="Budget"
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+      />
+      <input
+        type="date"
+        name="deadline"
+        value={formData.deadline}
+        onChange={handleChange}
+        className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
+      />
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full border border-black bg-black text-white rounded-md p-2  text-sm"
+      >
         {loading ? "Loading..." : "Submit"}
       </button>
     </form>

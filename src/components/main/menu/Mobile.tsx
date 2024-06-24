@@ -13,6 +13,9 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ handleClose }) => {
             <Link href="/en/">Home</Link>
           </li>
           <li onClick={handleClose}>
+            <Link href="/en/order">Order</Link>
+          </li>
+          <li onClick={handleClose}>
             <Link href="/en/services">Services</Link>
           </li>
           <li onClick={handleClose}>

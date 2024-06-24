@@ -44,8 +44,8 @@ export default function Contact() {
       className="w-full space-y-8 pb-12 pt-4 md:py-24 lg:py-32  flex flex-col items-center max-w-xl mx-auto"
     >
       <div className="gap-2 flex flex-col w-full">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Contact Us
+        <h2 className="text-4xl sm:text-5xl xl:text-6xl  font-bold ">
+          Contact <span className="text-[#DA0785]  ">Us</span>
         </h2>
         <p className="max-w-[500px] text-black/60 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
           Have a project in mind? Contact us to discuss how Cordavida can help

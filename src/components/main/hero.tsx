@@ -30,9 +30,9 @@ export default async function Hero() {
         </section>
 
         <section className="flex flex-row gap-2 w-full">
-          <Link href="/en/services" className="flex w-full max-w-[200px]">
+          <Link href="/en/order" className="flex w-full max-w-[200px]">
             <button className="bg-black border border-black text-sm font-medium rounded-md  text-white p-2 text-center px-4 w-full tracking-tighter ">
-              Our Services
+              Order Now
             </button>
           </Link>
           <Link href="/en/contact" className="flex w-full max-w-[200px]">

@@ -22,8 +22,8 @@ export default function Showcase() {
             projects, showcasing our expertise and commitment to quality.
           </p>
         </section>
-        <section className="flex f w-full justify-center items-center ">
-          <Link href="/en/portfolio" className="flex w-full max-w-[500px]">
+        <section className="flex f w-full justify-center items-center max-w-[300px] mx-auto">
+          <Link href="/en/services" className="flex w-full max-w-[500px]">
             <button className="bg-black text-white border border-black text-sm font-medium rounded-md text-black p-2 text-center px-4 w-full ">
               Our Portfolio
             </button>

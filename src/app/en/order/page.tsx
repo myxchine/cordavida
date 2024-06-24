@@ -2,12 +2,14 @@ import OrderForm from "@/server/order/form";
 
 const ReservationPage: React.FC = () => {
   return (
-    <main className="flex flex-col items-center justify-center w-full p-8">
-      <div className=" rounded-lg p-8 shadow-md space-y-6 w-full max-w-lg   bg-white bg-opacity-30">
-        <h1 className="text-xl font-bold uppercase">Make your order</h1>
+    <div className="container pt-4 px-4 md:px-6 pb-[48px] lg:py-32 md:pb-32 flex flex-col items-center justify-center w-full mx-auto">
+      <div className="  space-y-6 w-full max-w-2xl   bg-white text-center ">
+        <h1 className="text-4xl sm:text-5xl xl:text-6xl  font-bold ">
+          Create <span className="text-[#DA0785]  ">Your</span> Order
+        </h1>
         <OrderForm />
       </div>
-    </main>
+    </div>
   );
 };
 
