@@ -107,7 +107,7 @@ export default function OrderForm() {
         className="w-full border border-black/10 rounded-md p-2 text-black/60 text-sm"
         required
       />
-      <div className=" border border-black/10  rounded-md p-2 text-center text-sm w-full flex flex-col items-center justify-center bg-white">
+      <div className="w-full flex flex-col items-center justify-center bg-white">
         <input
           type="file"
           name="file"
@@ -117,7 +117,7 @@ export default function OrderForm() {
         />
         <label
           htmlFor="fileInput"
-          className="cursor-pointer flex flex-row items-center gap-1 "
+          className="cursor-pointer flex flex-row items-center gap-1 w-full  p-2 border border-black/10  rounded-md text-center text-sm w-full flex flex-col items-center justify-center bg-white"
         >
           {fileName ? (
             <span className="ml-2 text-sm text-black/60">{fileName}</span>
