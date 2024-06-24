@@ -15,10 +15,10 @@ export default async function Hero() {
         height={100}
         priority={true}
         alt="Hero"
-        className="mx-auto h-[280px] md:h-[400px] w-full overflow-hidden rounded-xl object-cover   blur"
+        className="mx-auto h-[290px] md:h-[600px] w-full overflow-hidden rounded-xl object-cover   blur"
       />
       <div className="flex flex-col gap-8">
-        <section className="flex flex-col gap-4 ">
+        <section className="flex flex-col gap-3 ">
           <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter">
             Elevate Your Brand with{" "}
             <span className="text-[#DA0785] text-4xl sm:text-5xl xl:text-6xl ">
@@ -27,7 +27,7 @@ export default async function Hero() {
             .
           </h1>
           <p className="text text-black/60 max-w-[600px] md:text-xl">
-            We are a design and large format printing company dedicated our
+            We are a design and large format printing company dedicated to our
             clients.
           </p>
         </section>

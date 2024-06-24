@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { CloseIcon, MenuIcon, Logo } from "@/components/icons";
+import { CloseIcon, MenuIcon2, Logo } from "@/components/icons";
 import MobileMenu from "@/components/menu/Mobile";
 import Nav from "@/components/menu/Nav";
 import Link from "next/link";
@@ -39,7 +39,7 @@ const Header = () => {
                 onClick={handleOpen}
                 className="flex items-center justify-center p-4"
               >
-                <MenuIcon className=" text-xl h-[24px] w-[24px] flex items-left justify-left" />
+                <MenuIcon2 className=" text-xl h-[24px] w-[24px] flex items-left justify-left" />
               </button>
             )}
 
