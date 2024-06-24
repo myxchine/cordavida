@@ -15,7 +15,7 @@ export default async function Hero() {
         height={100}
         priority={true}
         alt="Hero"
-        className="mx-auto h-[300px] md:h-[400px] w-full overflow-hidden rounded-xl object-cover   blur"
+        className="mx-auto h-[280px] md:h-[400px] w-full overflow-hidden rounded-xl object-cover   blur"
       />
       <div className="flex flex-col gap-8">
         <section className="flex flex-col gap-4 ">
